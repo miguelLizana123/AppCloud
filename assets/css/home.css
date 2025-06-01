@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f1115;
+    color: #f1f1f1;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40vh;
+    padding: 2rem;
+}
+
+.hero-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px #00f7ff;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #e0e0e0;
+}
+
+.svg-illustration {
+    position: relative;
+    width: 300px;
+    /* ajusta según tu necesidad */
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+.animated-png {
+    width: 100%;
+    animation: floatSway 6s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px #00c8ff);
+    will-change: transform;
+}
+
+.animated-png:hover {
+    animation-play-state: paused;
+    transform: scale(1.5) rotate(1deg);
+    filter: drop-shadow(0 0 15px #00eaff);
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #00c8ff, #007bff);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 200, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+    background: linear-gradient(135deg, #00eaff, #009dff);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 200, 255, 0.5);
+}
+
+/* Animación flotante y oscilante */
+@keyframes floatSway {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        filter: drop-shadow(0 0 8px #00c8ff);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(1deg);
+        filter: drop-shadow(0 0 12px #00f0ff);
+    }
+}
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+.socials a:hover svg,
+.socials a:focus svg,
+.socials a:active svg {
+    fill: #00ffcc;
+    transform: scale(1.2);
+}
+
+
+/* cartas de colaboradores */
+.team-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    margin: 80px;
+}
+
+.team-card {
+    background-color: #1a1d23;
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.4);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #007bff;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.role {
+    color: #00bfff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: #c0c0c0;
+    margin-bottom: 1.5rem;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.socials a svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.socials a:hover svg {
+    transform: scale(1.2);
+    fill: #00ffcc;
+    /* Color neón para efecto en modo oscuro */
+}
+
+.card {
+    position: relative;
+    background: #1e1e1e;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mac-buttons {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.mac {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.mac.red {
+    background: #ff5f57;
+}
+
+.mac.yellow {
+    background: #ffbd2e;
+}
+
+.mac.green {
+    background: #28c840;
+}
+
+.portfolio-button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.portfolio-button {
+    background: linear-gradient(135deg, #00c8ff, #007bff);
+    color: white;
+    font-weight: bold;
+    padding: 4px 4px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-button:hover {
+    background: linear-gradient(135deg, #00eaff, #009dff);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 200, 255, 0.5);
+}
+#typed-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .svg-illustration {
+        max-width: 300px;
+    }
+
+    .team-section {
+        margin-top: 120px !important;
+        padding-top: 50px !important;
+        margin: 10px;
+    }
+
+    .container {
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    .animated-png {
+        padding-top: 70px;
+    }
+}
