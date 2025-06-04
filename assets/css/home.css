@@ -8,7 +8,6 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #0f1115;
     color: #f1f1f1;
-    padding: 2rem;
     min-height: 100vh;
 }
 
@@ -58,6 +57,7 @@ body {
     cursor: pointer;
     filter: drop-shadow(0 0 8px #00c8ff);
     will-change: transform;
+    margin-top: 20px;
 }
 
 .animated-png:hover {
@@ -69,7 +69,7 @@ body {
 .hero-button {
     display: inline-block;
     margin-top: 5px;
-    padding: 12px 30px;
+    padding: 10px 25px;
     background: linear-gradient(135deg, #00c8ff, #007bff);
     color: white;
     font-weight: bold;
@@ -132,8 +132,8 @@ body {
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    padding-top: 100px;
-    margin: 80px;
+    padding-top: 140px;
+    margin-bottom:  120px;
 }
 
 .team-card {
@@ -283,7 +283,7 @@ h3 {
     }
 
     .team-section {
-        margin-top: 100px !important;
+        margin-top: 90px !important;
         padding-top: 30px !important;
         
     }
@@ -295,5 +295,8 @@ h3 {
 
     .animated-png {
         padding-top: 60px;
+    }
+    .team-card {
+        max-width: 70%;
     }
 }
