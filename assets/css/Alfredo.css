@@ -589,7 +589,6 @@ h1 {
 .align_images {
   margin: auto;
 }
-
 @media only screen and (min-width: 1000px) {
   .desktopMenu {
     display: none;
@@ -603,7 +602,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: unset;
+    position: fixed; /* ✅ Esto mantiene el header visible al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
   .max-width-header {
@@ -613,9 +618,13 @@ h1 {
     justify-content: space-between;
     max-width: 1350px;
     margin: auto;
+    padding: 10px 20px;
+  }
+
+  body {
+    padding-top: 80px; /* Ajusta a la altura del header */
   }
 }
-
 .mobileMenuCover {
   position: fixed;
   left: 0;
