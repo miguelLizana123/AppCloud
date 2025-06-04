@@ -283,17 +283,17 @@ h3 {
     }
 
     .team-section {
-        margin-top: 120px !important;
-        padding-top: 50px !important;
-        margin: 10px;
+        margin-top: 100px !important;
+        padding-top: 30px !important;
+        
     }
 
     .container {
-        margin-top: 30px;
-        padding-top: 30px;
+        margin-top: 20px;
+        padding-top: 20px;
     }
 
     .animated-png {
-        padding-top: 70px;
+        padding-top: 60px;
     }
 }
