@@ -300,3 +300,246 @@ h3 {
         max-width: 80%;
     }
 }
+/* === Opinión: Estilo moderno y elegante === */
+.opinion-section {
+  background: none; /* fondo semitransparente */
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.opinion-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.opinion-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: none; /* fondo opaco elegante */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+.opinion-form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.4);
+}
+.opinion-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.opinion-form input,
+.opinion-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.7rem;
+  background: rgba(255, 255, 255, 0.08); /* fondo opaco elegante */
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opinion-form input:focus,
+.opinion-form textarea:focus {
+  border: 1px solid #4fc3f7;
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.2);
+}
+
+.opinion-form button {
+  background: linear-gradient(135deg, #00bcd4, #2196f3);
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.opinion-form button:hover {
+ background: linear-gradient(135deg, #00eaff, #009dff);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 200, 255, 0.5);
+}
+
+.alert {
+  padding: 15px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+
+/* Testimonio individual */
+.testimonial {
+  min-width: 100%; /* 🔧 Asegura que cada testimonio ocupe el 100% del espacio visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Descripción del testimonio */
+.testimonial .description {
+  background-color: #f1f3f5;
+  padding: 1.2rem;
+  border-radius: 15px;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 90%;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial .description::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: #f1f3f5 transparent transparent transparent;
+}
+
+/* Avatar del usuario */
+.pic img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border: 3px solid #dee2e6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Nombre del usuario */
+.detail .name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #009dff;
+}
+
+/* Rol del usuario */
+.detail .role {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Botones de navegación */
+.testimonial-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  margin-left: 10px;
+}
+
+.testimonial-controls button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #495057;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s;
+}
+
+.testimonial-controls button:hover {
+  transform: scale(1.2);
+}
+
+/* Botones en extremos */
+.testimonial-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonial-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.testimonial-controls {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* permite que el slider no se bloquee por encima */
+}
+
+.testimonial-controls button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0.2rem 1rem;
+  pointer-events: all; /* habilita clicks */
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.testimonial-controls button:hover {
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .testimonial-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .testimonial .description {
+    font-size: 1rem;
+  }
+
+  .testimonial-controls button {
+    padding: 0.4rem 0.8rem;
+  }
+}
+.g-recaptcha{
+    align-items: center;
+    margin-bottom: 20px;
+}

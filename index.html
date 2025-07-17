@@ -7,7 +7,21 @@
   <title>Equipo Profesional</title>
   <link rel="stylesheet" href="assets/css/home.css" />
   <link rel="icon" href="assets/images/skills/dev-svgrepo-com.svg" type="image/svg+xml" />
-</head>
+  <script src="assets/js/jquery-3.7.1.min.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- Particles.js script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function () {
+      console.log('particles.js loaded');
+    });
+  </script>
+  <!-- ✅ Carga tu script cuando ya existe el DOM -->
+  <script type="module" src="assets/js/opinion.js"></script>
+  <script type="module" src="assets/js/opinionUltimo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <body>
 
@@ -40,8 +54,7 @@
         <span class="mac green"></span>
       </div>
       <div class="avatar">
-        <img src="assets/images/fondoperfil.webp"
-          alt="María Marrón">
+        <img src="assets/images/fondoperfil.webp" alt="María Marrón">
       </div>
       <h3>Miguel Lizana</h3>
       <p class="role">Idea creativa</p>
@@ -92,8 +105,7 @@
         <span class="mac green"></span>
       </div>
       <div class="avatar">
-        <img src="assets/images/yazilimci-olmak-1.jpg.webp"
-          alt="Bob Greenfield">
+        <img src="assets/images/yazilimci-olmak-1.jpg.webp" alt="Bob Greenfield">
       </div>
       <h3>José Andrade</h3>
       <p class="role">Pro de la programación</p>
@@ -143,8 +155,7 @@
         <span class="mac green"></span>
       </div>
       <div class="avatar">
-        <img src="assets/images/alfredp.jpg"
-          alt="Ann Richmond">
+        <img src="assets/images/alfredp.jpg" alt="Ann Richmond">
       </div>
       <h3>Alfredo Rojas</h3>
       <p class="role">Genio de ventas</p>
@@ -187,17 +198,36 @@
       </div>
     </div>
   </section>
+  <section id="testimonios">
+    <div class="testimonial-wrapper">
+      <div id="testimonial-slider" class="testimonial-slider"></div>
+      <div class="testimonial-controls">
+        <button id="prevBtn" aria-label="Anterior">‹</button>
+        <button id="nextBtn" aria-label="Siguiente">›</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="opinion" class="opinion-section">
+    <h2 class="opinion-title">¿Qué te pareció nuestro equipo?</h2>
+    <form id="opinionForm" class="opinion-form">
+      <label for="nombre">Tu nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="comentario">Tu opinión:</label>
+      <textarea id="comentario" name="comentario" rows="4" required></textarea>
+<!-- Widget de reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="6LegF4YrAAAAAKMMuFuxtkgfDOEh-PdyOrMsMUnp"></div>
+      <button type="submit">Enviar opinión</button>
+    </form>
+    <div id="mensajeEnviado" class="alert hidden">¡Gracias por tu opinión!</div>
+
+  </section>
 
 </body>
-<script src="assets/js/jquery-3.7.1.min.js" defer></script>
-<script src="assets/js/home.js" defer></script>
 
-<!-- Particles.js script -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>
-  particlesJS.load('particles-js', 'particles.json', function () {
-    console.log('particles.js loaded');
-  });
-</script>
 
 </html>
